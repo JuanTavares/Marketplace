@@ -6,6 +6,11 @@
 
 app-header {
     background-color: white;
+    position: relative;
+    @media (min-width: 992px) {
+        position: sticky;
+        top: 0;
+    }
 }
 
 main {
