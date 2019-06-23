@@ -1,0 +1,29 @@
+.container {
+    font-weight: 500;
+    justify-content: space-between;
+    align-content: center;
+}
+.navbar-brand {
+    text-transform: uppercase;
+
+    img {
+        max-width: 60px;
+    }
+}
+
+.nav-links {
+    align-content: center;
+}
+
+.horizontal-list {
+    li {
+        padding: 1.25rem 1rem;
+    }
+}
+
+.nav-icons {
+    cursor: pointer;
+    i {
+        font-size: 2rem;
+    }
+}
