@@ -41,12 +41,30 @@
 @media (max-width: 991px) {
     .banner {
         min-height: 600px;
+        .inner-banner {
+            h1 {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
     }
 }
 
 @media (max-width: 767px) {
     .banner {
         min-height: 500px;
+        .inner-banner {
+            h1 {
+                font-size: 30px;
+                line-height: 40px;
+            }
+            p {
+                font-size: 15px
+            }
+            a {
+                font-size: 14px;
+            }
+        }
     }
 }
 
@@ -54,6 +72,12 @@
     .banner {
         min-height: 400px;
         background-attachment: scroll, scroll;
+        .inner-banner {
+            h1 {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
     }
 }
 
