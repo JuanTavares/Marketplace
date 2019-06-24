@@ -1,0 +1,102 @@
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    border: none;
+    padding: 20px 0;
+    height: 56px;
+    border-bottom: solid 1px rgba(0,0,0,.1);
+    background: #fff;
+    transition: all .3s linear;
+    color: #000;
+    font-weight: 400;
+    -webkit-appearance: none;
+    &:focus {
+        border-bottom: solid 1px #090e1d;
+        outline: 0;
+        box-shadow: 0 2px 6px -8px rgba(#090e1d, .45);
+    }
+}
+
+.floating-label {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    label {
+        font-size: 12.5px;
+        opacity: .8;
+        font-weight: 400;
+        position: absolute;
+        top: calc(50% - 7px);
+        left: 0;
+        opacity: 0;
+        transition: all .3s ease;
+        padding-left: 44px;
+    }
+    input {
+        display: flex;
+        margin-left: auto;
+        width: calc(100% - 44px);
+    }
+    .icon {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 44px;
+        height: 56px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            margin: auto;
+            opacity: .15;
+            transition: all .3s ease;
+            
+            path {
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+input:not(:placeholder-shown) {
+    padding: 28px 0px 12px 0px;
+}
+input:not(:placeholder-shown) + label {
+    transform: translateY(-15px);
+    opacity: .7;
+}
+input:valid:not(:placeholder-shown) + label + .icon {
+    svg {
+        opacity: 1 !important; 
+        path {
+            fill: #090e1d !important; 
+        }      
+    }
+}
+input:not(:valid):not(:focus) + label + .icon {
+    animation-name: shake-shake;
+    animation-duration: .3s;
+}
+
+$displacement:  3px; 
+@keyframes shake-shake {
+  0% { transform: translateX(-$displacement);}
+  20% { transform: translateX($displacement);}
+  40% { transform: translateX(-$displacement);}
+  60% { transform: translateX($displacement);}  
+  80% { transform: translateX(-$displacement);}
+  100% { transform: translateX(0px);}
+}

@@ -18,6 +18,10 @@
 .horizontal-list {
     li {
         padding: 1.25rem 1rem;
+        cursor: pointer;
+    }
+    li:hover {
+        color: #888
     }
 }
 
