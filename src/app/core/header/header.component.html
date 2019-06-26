@@ -1,18 +1,26 @@
-<header class="navbar no-pad">
+<header class="navbar">
   <div class="container no-pad">
     <a class="navbar-brand" [routerLink]="['/']">
       <img src="../../../assets/images/UNICAMP_logo.png">
       UniMarket
     </a>
-    <nav class="nav-links">
-      <ul class="horizontal-list">
-        <li>Home</li>
-        <li>About</li>
-        <li>Store</li>
-      </ul>
-    </nav>
-    <div class="nav-icons">
-      <i class="material-icons">
+    
+      <nav class="nav-links">
+        <ul class="horizontal-list">
+          <li>
+            <a [routerLink]="['/']">Home</a>
+          </li>
+          <li>
+            <a [routerLink]="['/']">About</a>
+          </li>
+          <li>
+            <a [routerLink]="['/']">Store</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-icons">
+      <i [routerLink]="[ '/login' ]" class="material-icons">
         person_outline
       </i>
     </div>

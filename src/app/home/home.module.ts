@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './page/home/home.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, BannerComponent, LandingComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
