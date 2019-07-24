@@ -100,3 +100,19 @@ $displacement:  3px;
   80% { transform: translateX(-$displacement);}
   100% { transform: translateX(0px);}
 }
+
+.submit-button {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    .btn {
+        background-color: #090e1d;
+        text-transform: uppercase;
+        color: white;
+        width: 50%;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+    }
+}
