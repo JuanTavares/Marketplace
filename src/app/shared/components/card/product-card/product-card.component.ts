@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../../../models/product';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-product-card',
@@ -13,7 +14,6 @@ export class ProductCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.product);
   }
 
 }
