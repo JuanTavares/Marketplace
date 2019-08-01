@@ -12,4 +12,9 @@ export class ProductService {
   getBestSellers() {
     return this.afs.collection<Product>('best-sellers').valueChanges();
   }
+
+  addProducts(product: Product) {
+    return this.afs.collection('best-sellers').add(product);
+  }
+
 }

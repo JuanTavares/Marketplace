@@ -1,5 +1,8 @@
 <app-banner></app-banner>
 <div class="container p-0">
     <app-landing></app-landing>
-    <app-product-card *ngFor="let product of bestSellers$ | async" [product]="product"></app-product-card>
+    <div class="row">
+        <app-product-card *ngFor="let product of bestSellers$ | async" [product]="product" class="col-md-4 col-6 card-group">
+        </app-product-card>
+    </div>
 </div>
