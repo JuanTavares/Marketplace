@@ -6,10 +6,6 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  },
-  {
-    path: '/login',
-    loadChildren: '../modules/login/login.module#LoginModule'
   }
 ];
 

@@ -26,6 +26,7 @@ export class LoginFormComponent implements OnInit {
 
   enviar() {
     console.log(this.loginForm);
+    this.router.navigate(['user-profile']);
   }
 
 }
