@@ -5,12 +5,14 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './page/home/home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { CardModule } from '../shared/components/card/card.module';
 
 @NgModule({
   declarations: [HomeComponent, BannerComponent, LandingComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    CardModule
   ]
 })
 export class HomeModule { }

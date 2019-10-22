@@ -24,4 +24,8 @@ export class LoginFormComponent implements OnInit {
     });
   }
 
+  enviar() {
+    console.log(this.loginForm);
+  }
+
 }

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../../core/services/product/product.service';
+import { Product } from '../../../shared/models/product';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  bestSellers$: Observable<Product[]>;
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.bestSellers$ = this.productService.getBestSellers();
   }
 
 }
