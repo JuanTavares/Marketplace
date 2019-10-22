@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.bestSellers$ = this.productService.getBestSellers();
+    this.bestSellers$.subscribe(data => console.log(data));
   }
 
 }
